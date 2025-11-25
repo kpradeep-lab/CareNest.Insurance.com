@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -295,5 +294,25 @@
       document.getElementById('contact-result').textContent='';
     }
   </script>
+  <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DdL00000g8w1y',
+				'CareNestWebDeployment',
+				'https://orgfarm-afea3160f2-dev-ed.develop.my.site.com/ESWCareNestWebDeployment1764069847513',
+				{
+					scrt2URL: 'https://orgfarm-afea3160f2-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-afea3160f2-dev-ed.develop.my.site.com/ESWCareNestWebDeployment1764069847513/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </body>
 </html>
